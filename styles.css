@@ -1,0 +1,244 @@
+:root{
+    --blue: hsl(246, 80%, 60%);
+    --work: hsl(15, 100%, 70%);
+    --play: hsl(195, 74%, 62%);
+    --study: hsl(348, 100%, 68%);
+    --exercise: hsl(145, 58%, 55%);
+    --social: hsl(264, 64%, 52%);
+    --selfcare: hsl(43, 84%, 65%);
+    --very-dark-blue: hsl(226, 43%, 10%);
+    --dark-blue: hsl(235, 46%, 20%);
+    --desaturated-blue: hsl(235, 45%, 61%);
+    --pale-blue: hsl(236, 100%, 87%);
+    --radius: 10px;
+}
+body{
+    font-family: 'Rubik', sans-serif;
+    background-color: var(--very-dark-blue);
+}
+h1, h2{
+    font-size: 18px;
+    color: white;
+    font-weight: 400;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+p{
+    color: var(--pale-blue);
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.card-wrapper{
+    max-width: 450px;
+    width: 90vw;
+}
+.person-card{
+    border-radius: var(--radius);
+    background-color: var(--dark-blue);
+    display: flex;
+    flex-direction: column;
+}
+.person-header{
+    background-color: var(--blue);
+    border-radius: var(--radius);
+    padding: 2rem 1rem;
+}
+.info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.info img{
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+.person{
+    margin-left: 1rem;
+}
+.person p, .person h2{
+    margin: 0.25rem;
+}
+.btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+.btn{
+    padding: 0.5rem 1rem;
+    margin-left: 0.5rem;
+    font-size: 15px;
+    color: var(--pale-blue);
+    font-weight: 400;
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+}
+.btn:hover:not(.active){
+    color: var(--desaturated-blue);
+}
+.active{
+    color: white;
+}
+.card{
+    border-radius: var(--radius);
+    padding-top: 3rem;
+    margin: 1rem 0;
+}
+.card-info{
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    padding: 1rem;
+    padding-bottom: 0;
+    background-color: var(--dark-blue);
+    border-radius: var(--radius);
+    transition: filter 0.3s ease-in-out;
+}
+.card-info:hover{
+    filter: brightness(1.3);
+}
+.card-data p{
+    margin-top: 2.2rem;
+}
+.card-data h1{
+    margin-bottom: 0;
+    padding-bottom: 0.5rem;
+}
+.card-header img{
+    margin: 0;
+}
+.hours{
+    font-size: 2rem;
+    font-weight: 400;
+}
+.card-data{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card-header{
+    display: flex;
+    justify-content: space-between;
+}
+.card-header h2{
+    text-transform: capitalize;
+    font-size: 18px;
+    margin: 0;
+    margin-top: 2rem;
+}
+.card-header img{
+    margin-top: 3rem;
+}
+
+.card:nth-of-type(1){
+    background: url(./images/icon-work.svg) right top no-repeat, var(--work);
+}
+.card:nth-of-type(2){
+    background: url(./images/icon-play.svg) right top no-repeat, var(--play);
+}
+.card:nth-of-type(3){
+    background: url(./images/icon-study.svg) right top no-repeat, var(--study);
+}
+.card:nth-of-type(4){
+    background: url(./images/icon-exercise.svg) right top no-repeat, var(--exercise);
+}
+.card:nth-of-type(5){
+    background: url(./images/icon-social.svg) right top no-repeat, var(--social);
+}
+.card:nth-of-type(6){
+    background: url(./images/icon-self-care.svg) right top no-repeat, var(--selfcare);
+}
+
+@media screen and (min-width: 400px){
+    .card-info{
+        padding: 1rem 2rem;
+    }
+}
+@media screen and (min-width: 915px){
+    .card-wrapper{
+        max-width: 90vw;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 2rem;
+        align-items: center;
+    }
+    .activities-wrapper{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 2rem;
+        align-items: center;
+    }
+    .person-card{
+        width: 250px;
+    }
+    .person-header{
+        display: grid;
+        justify-content: flex-start;
+    }
+    .info{
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+    .person{
+        margin: 1rem 0 3rem 0;
+    }
+    .person h2{
+        font-size: 2.5rem;
+    }
+    .btn-container{
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 2rem 0;
+        margin-bottom: 0;
+        padding: 0;
+    }
+    .btn{
+        margin-bottom: 1rem;
+        margin-left: 0;
+    }
+    .card{
+        margin: 0;
+    }
+    .card-info{
+        flex-direction: column;
+        padding: 1rem;
+        align-items: flex-start;
+    }
+    .card-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    .card-header img{
+        margin: 0;
+    }
+    .card-header h2{
+        margin: 0;
+    }
+    .card-data{
+        margin: 1.2rem 0;
+        flex-direction: column;
+    }
+    .card-data p{
+        margin: 0;
+    }
+    .card-data h1, .hours{
+        font-size: 3rem;
+        margin: 0;
+        margin-bottom: rem;
+    }
+}
